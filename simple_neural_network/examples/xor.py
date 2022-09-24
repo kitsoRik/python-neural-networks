@@ -6,7 +6,7 @@ def activate(value):
     return [round(x[0]) for x in value]
 
 
-nn = NeuralNetwork(2, 2, 1)
+nn = NeuralNetwork(2, 4, 1)
 
 # training data
 training_inputs = [
@@ -18,7 +18,7 @@ training_inputs = [
 
 print("# Initializing ")
 
-epochs_amount = 50000
+epochs_amount = 10000
 
 for epoch in range(epochs_amount):
     # randomize array
