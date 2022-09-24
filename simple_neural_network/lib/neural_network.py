@@ -101,4 +101,4 @@ class NeuralNetwork:
 
     # learning rate
     def get_learning_rate(self):
-        return 0.01
+        return 0.1
