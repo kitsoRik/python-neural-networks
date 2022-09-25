@@ -19,6 +19,8 @@ class NeuralNetwork:
         self.ih_weights = np.array(self.ih_weights).T
         self.ho_weights = np.array(self.ho_weights).T
 
+        self.learning_rate = 0.1
+
     def train(self, inputs_array, targets_array):
         # convert to numpy arrays and transpose to have one column with many rows
         inputs = np.array([inputs_array]).T
@@ -101,4 +103,7 @@ class NeuralNetwork:
 
     # learning rate
     def get_learning_rate(self):
-        return 0.1
+        return self.learning_rate
+
+    def set_learning_rate(self, learning_rate):
+        self.learning_rate = learning_rate
