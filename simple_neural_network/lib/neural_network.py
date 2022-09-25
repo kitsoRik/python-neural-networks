@@ -8,12 +8,12 @@ class NeuralNetwork:
         self.outputs_size = inputs_size
 
         # initialize weights
-        self.ih_weights = [[np.random.rand() for _ in range(hidden_size)] for _ in range(inputs_size)]
-        self.ho_weights = [[np.random.rand() for _ in range(outputs_size)] for _ in range(hidden_size)]
+        self.ih_weights = [[np.random.randn() for _ in range(hidden_size)] for _ in range(inputs_size)]
+        self.ho_weights = [[np.random.randn() for _ in range(outputs_size)] for _ in range(hidden_size)]
 
         # initialize biases
-        self.bias_h = np.array([[np.random.rand()] for _ in range(hidden_size)])
-        self.bias_o = np.array([[np.random.rand()] for _ in range(outputs_size)])
+        self.bias_h = np.array([[np.random.randn()] for _ in range(hidden_size)])
+        self.bias_o = np.array([[np.random.randn()] for _ in range(outputs_size)])
 
         # convert to numpy arrays and transpose to have one column with many rows
         self.ih_weights = np.array(self.ih_weights).T
